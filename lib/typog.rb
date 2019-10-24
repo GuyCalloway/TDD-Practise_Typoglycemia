@@ -20,7 +20,7 @@ def typo_g(string)
     letter_array << end_letter
     letter_array.flatten!
 
-    exclusions.each { |a| if a 
+    exclusions.reverse.each { |a| if a 
                 letter_array.insert(a[1], a[0])
     end }
     letter_array.join("")
