@@ -40,4 +40,8 @@ describe "typo g" do
     it "returns scrambled string" do
         expect(typo_g("tik-tak")).to eq("tai-ktk")
     end
+
+    it "returns scrambled string" do
+        expect(typo_g("dbca.")).to eq("dbca.")
+    end
 end

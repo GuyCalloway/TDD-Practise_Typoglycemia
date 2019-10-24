@@ -13,14 +13,13 @@ def typo_g(string)
             exclusions << [a, i]
           end
         end
-
     letter_array = [letters.shift]
-    letters.pop
+    end_letter = letters.pop
     sorted_letters = letters.sort { |a, b|  a <=> b} 
     letter_array << sorted_letters
-    letter_array << word[-1]
+    letter_array << end_letter
     letter_array.flatten!
-    
+
     exclusions.each { |a| if a 
                 letter_array.insert(a[1], a[0])
     end }
