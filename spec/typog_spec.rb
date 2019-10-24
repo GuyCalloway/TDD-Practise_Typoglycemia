@@ -20,4 +20,8 @@ describe "typo g" do
     it "returns 3 letter string" do
         expect(typo_g("heacy")).to eq("hacey")
     end
+
+    it "returns 3 letter string" do
+        expect(typo_g("heacy heacy")).to eq("hacey hacey")
+    end
 end
