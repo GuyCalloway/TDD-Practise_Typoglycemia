@@ -1,13 +1,23 @@
 def typo_g(string)
+   z = ""
+   x = false
+
   if string.length <= 3
     return string
   else
+    
+    # if ["."].include? string[-1]
+    #     x = true
+    #     z << string.slice
+    # end
+
     words = string.split(" ")
+    
     sorted_words = words.map { |word| 
         y = word.split("")
     x = [y.shift]
     y.pop
-    z = y.sort { |a, b| a <=> b} 
+    z = y.sort { |a, b| a.match(/\.|,|'|-/) ? 0 : b.match(/\.|,|'|-/) ? 0 : a <=> b} 
     x << z
     x << word[-1]
     x.join("")
