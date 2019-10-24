@@ -14,6 +14,10 @@ describe "typo g" do
     end
 
     it "returns 3 letter string" do
-        expect(typo_g("hey")).to eq("hey")
+        expect(typo_g("heay")).to eq("haey")
+    end
+
+    it "returns 3 letter string" do
+        expect(typo_g("heacy")).to eq("hacey")
     end
 end
