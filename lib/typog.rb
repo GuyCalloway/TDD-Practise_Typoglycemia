@@ -5,12 +5,6 @@ def typo_g(string)
   if string.length <= 3
     return string
   else
-    
-    # if ["."].include? string[-1]
-    #     x = true
-    #     z << string.slice
-    # end
-
     words = string.split(" ")
     
     sorted_words = words.map { |word| 
@@ -22,7 +16,6 @@ def typo_g(string)
     x << word[-1]
     x.join("")
     }
-  
   end
   return sorted_words.join(" ")
 end
